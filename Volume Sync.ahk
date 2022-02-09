@@ -42,6 +42,7 @@ Menu, Tray, Tip, Volume Sync
 Menu, Tray, Add, Volume Sync, VolumeSync
 
 Menu, Tray, Add
+Menu, Tray, Add, About
 Menu, Tray, Add, Start With Windows, ToggleWinStartup
 	if FileExist(A_Startup "\Volume Sync.lnk")
 		Menu, Tray, Check, Start With Windows
