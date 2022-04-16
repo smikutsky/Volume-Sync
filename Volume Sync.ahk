@@ -21,6 +21,7 @@ Version History:
 
 1.0 - 12/12/2020 - Initial release
 1.0.1 - 2/9/2022 - Updated about page
+1.1.0 - 4/16/2022 - Bug fix
 */
 
 #NoEnv
@@ -55,7 +56,7 @@ Loop {
 	VA_IMMDeviceEnumerator_GetDefaultAudioEndpoint(deviceEnumerator, 0, 0, ddevice)
 	VA_IMMDeviceEnumerator_GetDefaultAudioEndpoint(deviceEnumerator, 0, 2, cdevice)
 
-	if(ddevice == cdevice){
+	if(ddevice != cdevice){
 		vol := VA_GetVolume("1", "", ddevice)
 		VA_SetVolume(vol, "1", "", cdevice)
 	}
